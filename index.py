@@ -1,9 +1,20 @@
-print("Adad Avale")
-sieve = [True] * 11
-for i in range(2, 10):
-    if sieve[i]:
-        print(i)   
-        for j in range(i*i, 10, i):          
-            sieve[j] = False
+#python -u index.py
+#TODO Python 
 
-print(sieve)
+#print ("Pleas Enter The Number : ")
+
+number = 33
+number2 = int(number)
+
+print(number is number2)
+
+
+
+# Number = float(input())
+
+# if Number>=0  Number<=10:
+#     print(f"Number ({Number}) Aruond 0 And 10")
+# elif Number>10:
+#     print(f"Number ({Number}) Most On 10")
+# else:
+#     print(f"Number ({Number}) Is Nagetiv")
