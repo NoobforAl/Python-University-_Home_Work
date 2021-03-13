@@ -54,12 +54,9 @@ def text_display(letter, x_start, y_start):
 
 run = True
 while run:
-
     screen.fill((black))
-
     z = [0] * screen_size  # Donut. Fills donut space
     b = [' '] * screen_size  # Background. Fills empty space
-
     for j in range(0, 628, theta_spacing):  # from 0 to 2pi
         for i in range(0, 628, phi_spacing):  # from 0 to 2pi
             c = math.sin(i)
@@ -80,10 +77,8 @@ while run:
             if rows > y and y > 0 and x > 0 and columns > x and D > z[o]:
                 z[o] = D
                 b[o] = chars[N if N > 0 else 0]
-
     if y_start == rows * y_separator - y_separator:
         y_start = 0
-
     for i in range(len(b)):
         A += 0.000002 # for faster rotation change to 0.0002
         B += 0.000001 # for faster rotation change to 0.0001
@@ -95,12 +90,8 @@ while run:
             x_start = 0
             text_display(b[i], x_start, y_start)
             x_start += x_separator
-
-
     pygame.display.update()
-
     hue += 0.005
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
