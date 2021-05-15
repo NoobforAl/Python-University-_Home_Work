@@ -1,26 +1,24 @@
 import sys, random, stddraw
-from color import DARK_GREEN, GRAY
+from color import  GRAY
 n = int(sys.argv[1])
 x,y = 0, 0
 for i in range(n):
     cx = x
     cy = y
     c = random.uniform(0, 1)
-    if c < 0.02:
-        x = 0.50
-        y = 0.27 * cy
-    if 0.02 <= c < 0.17 :
-        x = (-0.14 * cx) + (0.26 * cy) + 0.57
-        y = (0.25 * cx) + (0.22 * cy) - 0.04
-    if 0.17 <= c < 0.3:
-        x = (0.17 * cx) - (0.21 * cy) + 0.41
-        y = (0.22 * cx) + (0.18 * cy) + 0.09
-    if 0.3 <= c <= 1.0:
-        x = (0.78 * cx) + (0.03 * cy) + 0.11
-        y = (-0.03 * cx) + (0.74 * cy) + 0.27
-    stddraw.setPenRadius(0.00001)
-    stddraw.setPenColor(DARK_GREEN)
+    if 0.0 <= c < 0.4 :
+        x = 0.31 * cx - 0.53 * cy + 0.89
+        y = -0.46 * cx - 0.29 * cy + 1.04
+    if 0.4 <= c < 0.55:
+        x = 0.31 * cx - 0.08 * cy + 0.22
+        y = 0.15 * cx - 0.45 * cy + 0.34
+    if 0.55 <= c <= 1.0:
+        x = 0.55 * cy + 0.01
+        y = 0.69 * cx - 0.20 * cy + 0.38
+    stddraw.setPenRadius(0.0015)
+    stddraw.setPenColor(GRAY)
     stddraw.point(x, y)
     stddraw.show(0)
 stddraw.show()
+
 
